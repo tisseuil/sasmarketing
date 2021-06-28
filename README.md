@@ -7,3 +7,6 @@ This repository contains a list of SAS macro-programs that I have developed for 
 - analysing models goodness-of-fit 
 - projecting modeling results from new data
 
+# Installation
+
+# Example 
