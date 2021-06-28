@@ -10,12 +10,5 @@ This repository contains a list of SAS macro-programs that I have developed for 
 # Installation
 
 # Example 
-truc bidule
 
-install.packages("usethis")
-usethis::create_github_token()
-install.packages("gitcreds")
-library(gitcreds)
-gitcreds_set()
-gitcreds_get()
 
