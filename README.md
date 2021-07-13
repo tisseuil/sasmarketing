@@ -1,11 +1,3 @@
----
-title: "Untitled"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # sasmarketing
 SAS Macro Programs used for Marketing purpose
@@ -50,8 +42,8 @@ run;
 
 ## Construction du modèle de validation croisée avec sélection de variables ;
 ```{r, eval=F} 
-%let var_x= Age Pclass Fare SibSp Parch PassengerId;
 
+%let var_x= Age Pclass Fare SibSp Parch PassengerId;
 
 * Run AIC-based stepwise variable selection;
 %SYMDEL COVARFIN;
