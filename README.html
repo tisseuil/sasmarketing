@@ -202,11 +202,11 @@ summary {
 <div id="example" class="section level1">
 <h1>Example</h1>
 <div id="chargement-de-la-librairie" class="section level2">
-<h2>Chargement de la librairie ;</h2>
+<h2>Chargement de la librairie</h2>
 <p>```{r, eval=F}</p>
-<p>filename x ’\srvfic4ORGANISATIONNEL_SAS-BOITE-OUTILS*.sas’; %include x/source2;</p>
+<p>filename x “path_to_sasmarketing*.sas”&quot;; %include x/source2;</p>
 <pre><code>
-## Chargement du jeu de données Titanic ;
+## Chargement du jeu de données Titanic
 
 ```{r, eval=F} 
 proc import datafile = &quot;&amp;DIR_DSRC\train.csv&quot;
@@ -227,14 +227,12 @@ run;</code></pre>
 <h2>Construction du modèle de validation croisée avec sélection de variables ;</h2>
 <p>```{r, eval=F}</p>
 <p>%let var_x= Age Pclass Fare SibSp Parch PassengerId;</p>
-<ul>
-<li><p>Run AIC-based stepwise variable selection; %SYMDEL COVARFIN; %AICoptSW( <em>Jeu de données en entrée; indat=titanic, </em>la variable cible binaire (1/0) à prédire; y=Survived,</p>
+<p>%SYMDEL COVARFIN; %AICoptSW( <em>Jeu de données en entrée; indat=titanic, </em>la variable cible binaire (1/0) à prédire; y=Survived,</p>
 <p>*Variables prédicteurs/descripteurs ; x=&amp;var_x,</p>
 <ul>
 <li><p>nombre qui détermine la reproductibilité de l’échantillonnage de validation croisée ; seed=1,</p></li>
 <li><p>spécifie le nombre de sous-échantillons distincts pour réaliser la validation croisée ; fold=5,</p></li>
 <li><p>nombre de fois que le processus de validation croisée est répété ; repeats=1 );</p></li>
-</ul></li>
 </ul>
 <pre><code>
 ## Retrieve the best set of variables candidates according to the given frequency threshold;

@@ -12,17 +12,17 @@ This repository contains a list of SAS macro-programs that I have developed for 
 
 # Example 
 
-## Chargement de la librairie ;
+## Chargement de la librairie
 
 
 ```{r, eval=F} 
 
-filename x 'path_to_sasmarketing\sasmarketing\*.sas';
+filename x "path_to_sasmarketing\sasmarketing\*.sas"";
 %include x/source2;
 
 ```
 
-## Chargement du jeu de données Titanic ;
+## Chargement du jeu de données Titanic
 
 ```{r, eval=F} 
 proc import datafile = "&DIR_DSRC\train.csv"
@@ -45,7 +45,6 @@ run;
 
 %let var_x= Age Pclass Fare SibSp Parch PassengerId;
 
-* Run AIC-based stepwise variable selection;
 %SYMDEL COVARFIN;
 %AICoptSW(
   *Jeu de données en entrée;
