@@ -12,7 +12,7 @@ This repository contains a list of SAS macro-programs that I have developed for 
 
 # Example 
 
-## Chargement de la librairie
+## *Chargement de la librairie;
 
 
 ```{r, eval=F} 
@@ -22,7 +22,7 @@ filename x "path_to_sasmarketing\sasmarketing\*.sas"";
 
 ```
 
-## Chargement du jeu de données Titanic
+## *Chargement du jeu de données Titanic;
 
 ```{r, eval=F} 
 proc import datafile = "&DIR_DSRC\train.csv"
