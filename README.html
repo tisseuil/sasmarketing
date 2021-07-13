@@ -225,7 +225,8 @@ run;</code></pre>
 </div>
 <div id="construction-du-modèle-de-validation-croisée-avec-sélection-de-variables" class="section level2">
 <h2>Construction du modèle de validation croisée avec sélection de variables ;</h2>
-<p>```{r, eval=F} %let var_x= Age Pclass Fare SibSp Parch PassengerId;</p>
+<p>```{r, eval=F}</p>
+<p>%let var_x= Age Pclass Fare SibSp Parch PassengerId;</p>
 <ul>
 <li><p>Run AIC-based stepwise variable selection; %SYMDEL COVARFIN; %AICoptSW( <em>Jeu de données en entrée; indat=titanic, </em>la variable cible binaire (1/0) à prédire; y=Survived,</p>
 <p>*Variables prédicteurs/descripteurs ; x=&amp;var_x,</p>
