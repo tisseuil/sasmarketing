@@ -17,7 +17,7 @@ This repository contains a list of SAS macro-programs that I have developed for 
 
 ```{r, eval=F} 
 
-filename x '\\srvfic4\DDOC\DMCD\MARK\REFERENTIEL ORGANISATIONNEL\REFERENTIEL_SAS\SAS-BOITE-OUTILS\pgm\sasmarketing\*.sas';
+filename x 'path_to_sasmarketing\sasmarketing\*.sas';
 %include x/source2;
 
 ```
